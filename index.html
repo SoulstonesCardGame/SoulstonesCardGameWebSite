@@ -1,108 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="imagex/png" href="./images/icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <title>Soulstones</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end; /* Alinhar ao bottom da página */
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-    }
-
-    /* Container styling */
-    .container {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 350px;
-      position: fixed; /* Fixa na tela */
-      bottom: 30px; /* Sempre alinhado ao fundo */
-      left: 50%;
-      transform: translateX(-50%); /* Centraliza horizontalmente */
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin: 10px 0;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-    }
-
-    .social-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 70px;
-      transition: transform 0.3s;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.2);
-    } 
-    /* Background for desktop (16:9) */
-    body {
-      background: url('images/pc-bg.png') no-repeat center center/cover;
-    }
-
-    .text {
-      font-size: 25px;
-    }
-
-    /* Background for mobile (9:16) */
-    @media (max-width: 768px) {
-      body {
-        background: url('images/mobile-bg.png') no-repeat center center/cover;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      .social-links a {
-        font-size: 70px;
-      }
-    }
-  </style>
+  <title>SoulStones - Conecte-se com a sua essência</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <p class="text">Conheça nossas redes!</p>.
-    <div class="social-links">
-      <a href="https://discord.gg/7XYKAXpQYj" target="_blank">
-        <i class="fab fa-discord"></i>
-      </a>
-      <a href="https://www.instagram.com/soulstonescardgame/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/5585988636284" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-      </a>
+  <!-- Cabeçalho com logo e navegação -->
+  <header>
+    <img src="images/logo.png" alt="SoulStones Logo" class="logo">
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#features">Recursos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Seção Hero com background atualizado -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Conecte-se com a sua essência</h2>
+      <p>Descubra o poder transformador dos SoulStones e encontre equilíbrio para sua vida.</p>
+      <a href="#sobre">Saiba Mais</a>
     </div>
-  </div>
+  </section>
+
+  <!-- Seção Sobre com slide up -->
+  <section id="sobre" style="animation-delay: 0.3s;">
+    <h2>Sobre o SoulStones</h2>
+    <p>Nossa missão é conectar pessoas à sua essência por meio de produtos e experiências que promovem bem-estar, equilíbrio e transformação pessoal.</p>
+  </section>
+
+  <!-- Seção Features com hover dinâmico -->
+  <section id="features" style="animation-delay: 0.5s;">
+    <h2>O que oferecemos</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Qualidade Superior</h3>
+        <p>Produtos selecionados com rigor para proporcionar o melhor em autenticidade e design.</p>
+      </div>
+      <div class="feature">
+        <h3>Experiência Única</h3>
+        <p>Vivencie momentos de introspecção e conexão com rituais exclusivos.</p>
+      </div>
+      <div class="feature">
+        <h3>Inovação e Tradição</h3>
+        <p>Uma fusão entre técnicas ancestrais e inovação contemporânea.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Contato com efeito de slide -->
+  <section id="contato" style="animation-delay: 0.7s;">
+    <h2>Entre em Contato</h2>
+    <p>Tem alguma dúvida ou deseja saber mais? Conecte-se conosco e descubra como transformar sua jornada.</p>
+    <a href="mailto:contato@soulstones.com" style="background: var(--primary-color);">Fale Conosco</a>
+  </section>
+
+  <!-- Rodapé com fade in -->
+  <footer>
+    <p>&copy; 2025 SoulStones. Todos os direitos reservados.</p>
+  </footer>
+  
+  <script src="js/script.js"></script>
 </body>
 </html>
