@@ -1,13 +1,21 @@
-/* Variáveis de cores e fontes */
+/* ================================
+   VARIÁVEIS DE CORES E FONTES
+   Altere os valores abaixo para modificar a paleta de todo o site.
+================================ */
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --background-color: #f4f4f4;
-    --font-family: 'Arial', sans-serif;
+    --primary-color: #204659;   /* Cor principal para fundos e textos importantes */
+    --accent-color: #e8812c;    /* Cor de destaque, botões e elementos chamativos */
+    --light-color: #ecf0f1;     /* Cor clara para textos e contrastes */
+    --background-color: #f4f4f4;/* Cor de fundo geral da página */
+    --font-family: 'Arial', sans-serif; /* Fonte padrão do site */
   }
   
-  /* Reset básico */
+  /* IMPORTAÇÃO DA FONTE ORBITRON (opcional para toque futurista) */
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+  
+  /* ================================
+             RESET BÁSICO
+  ================================ */
   * {
     margin: 0;
     padding: 0;
@@ -23,23 +31,23 @@
     background-color: var(--background-color);
   }
   
-  /* Estilo para a logo */
-  .logo {
-    max-width: 150px;
-    display: block;
-    margin: 0 auto 1rem;
-  }
-  
+  /* ================================
+             HEADER
+  ================================ */
   header {
     background: var(--primary-color);
-    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
-    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    animation: fadeInDown 1s ease;
+  }
+  .logo {
+    max-width: 150px;
+    height: auto;
   }
   nav a {
     color: var(--light-color);
@@ -52,6 +60,9 @@
     color: var(--accent-color);
   }
   
+  /* ================================
+           SEÇÃO HERO
+  ================================ */
   .hero {
     background-image: url('../images/bg-withless-logo.png');
     background-repeat: no-repeat;
@@ -78,7 +89,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: #fff;
     max-width: 800px;
     padding: 0 1rem;
     opacity: 0;
@@ -88,15 +99,15 @@
   .hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #fff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
   }
   .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
   }
-  .hero-content a {
+  .cta {
     display: inline-block;
     background: var(--accent-color);
     color: #fff;
@@ -106,11 +117,14 @@
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.3s ease;
   }
-  .hero-content a:hover {
+  .cta:hover {
     background: #c0392b;
     transform: scale(1.05);
   }
   
+  /* ================================
+          SEÇÕES GERAIS
+  ================================ */
   section {
     padding: 3rem 2rem;
     text-align: center;
@@ -162,7 +176,9 @@
     animation: fadeInUp 1s ease;
   }
   
-  /* Animações */
+  /* ================================
+             ANIMAÇÕES
+  ================================ */
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -183,5 +199,41 @@
     0% { filter: hue-rotate(0deg); }
     50% { filter: hue-rotate(15deg); }
     100% { filter: hue-rotate(0deg); }
+  }
+  
+  /* ================================
+           RESPONSIVIDADE
+  ================================ */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+    .hero-content h2 {
+      font-size: 2.5rem;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+    }
+    .cta {
+      font-size: 1rem;
+      padding: 0.7rem 1.2rem;
+    }
+    section {
+      padding: 2rem 1rem;
+    }
+    section h2 {
+      font-size: 2rem;
+    }
+    section p {
+      font-size: 1rem;
+    }
   }
   
